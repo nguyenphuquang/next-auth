@@ -61,7 +61,8 @@ async function NextAuthHandler(params) {
     action,
     providerId,
     error,
-    method = "GET"
+    method = "GET",
+    headers,
   } = req;
   const {
     options,
