@@ -89,7 +89,8 @@ async function callback(params) {
           const isAllowed = await callbacks.signIn({
             user: userOrProfile,
             account,
-            profile: OAuthProfile
+            profile: OAuthProfile,
+            headers,
           });
 
           if (!isAllowed) {
@@ -246,7 +247,8 @@ async function callback(params) {
           account,
           email: {
             email: identifier
-          }
+          },
+          headers,
         });
 
         if (!signInCallbackResponse) {
@@ -384,7 +386,8 @@ async function callback(params) {
       const isAllowed = await callbacks.signIn({
         user,
         account,
-        credentials
+        credentials,
+        headers,
       });
 
       if (!isAllowed) {
