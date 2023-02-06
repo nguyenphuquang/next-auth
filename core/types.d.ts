@@ -269,6 +269,7 @@ export interface CallbacksOptions<P extends Record<string, unknown> = Profile, A
         };
         /** If Credentials provider is used, it contains the user credentials */
         credentials?: Record<string, CredentialInput>;
+        headers?: Record<string, any>;
     }) => Awaitable<string | boolean>;
     /**
      * This callback is called anytime the user is redirected to a callback URL (e.g. on signin or signout).
